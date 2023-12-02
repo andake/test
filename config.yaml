@@ -1,0 +1,22 @@
+CompileFlags:
+  Add: [-std=c++20, -Wall, -Wextra, -Wconversion, -Werror, -Wunused-function, -Wunused-result, -pedantic]
+  Compiler: 
+Diagnostics:
+  UnusedIncludes: Strict
+  ClangTidy:
+    Add: [
+      modernize*,
+      performance*,
+      cppcoreguidelines*,
+      cert*,
+      readability*,
+      bugprone*,
+      misc*,
+      clang*]
+    Remove: [
+      bugprone-easily-swappable-parameters,
+      modernize-use-trailing-return-type,
+      readability-identifier-length,
+      cert-err58-cpp,
+      cppcoreguidelines-pro-type-vararg,
+      cppcoreguidelines-pro-bounds-array-to-pointer-decay ]
